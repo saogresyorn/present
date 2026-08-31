@@ -1,0 +1,92 @@
+/* src/app/globals.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+  padding: 40px 20px;
+}
+
+/* Container จัดกลาง */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* หัวข้อหลัก */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333333;
+}
+
+/* Layout การจัดวาง Card */
+.band-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ตัว Card วงดนตรี */
+.band-card {
+  border: 1px solid #e94e4e;
+  padding: 20px;
+  background-color: #d3ee71;
+}
+
+.band-card h2 {
+  font-size: 20px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  color: #111111;
+}
+
+.genre {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 14px;
+  color: #444444;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* รายชื่อสมาชิก */
+.members-section h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #333333;
+}
+
+.members-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.members-section li {
+  font-size: 14px;
+  color: #444444;
+  margin-bottom: 4px;
+}
+
+/* จัดจัดการรูปภาพ */
+/* คัดลอกส่วนนี้ไปวางแทนที่ .image-container เดิมใน globals.css */
+.image-container {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.band-image {
+  object-fit: cover;
+} 
