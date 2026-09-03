@@ -14,28 +14,37 @@ export default function BandCard({ band }: BandCardProps) {
           alt={band.name}
           style={{
             width: "100%",
-            maxHeight: "260px",   // กำหนดความสูงสูงสุดไว้ไม่ให้ใหญ่เกิน
-            objectFit: "contain", // แสดงรูปครบเต็มใบ ไม่โดนซูมหรือตัดหัว
+            maxHeight: "260px",
+            objectFit: "contain",
             display: "block",
             margin: "0 auto",
           }}
         />
       </div>
 
-      <h2>{band.name}</h2>
-      <p className="genre">แนวเพลง: {band.genre}</p>
-
-      {band.description && <p className="description">{band.description}</p>}
+      <div className="band-info">
+        <h2>{band.name}</h2>
+        <p className="genre">แนวเพลง: {band.genre}</p>
+        {band.description && <p className="description">{band.description}</p>}
+      </div>
 
       <div className="members-section">
         <h3>สมาชิกในวง:</h3>
-        <ul>
+        <div className="members-grid">
           {band.members.map((member) => (
-            <li key={member.id}>
-              {member.name} ({member.role})
-            </li>
+            <div key={member.id} className="member-card">
+              {member.image && (
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="member-image"
+                />
+              )}
+              <p className="member-name">{member.name}</p>
+              <p className="member-role">({member.role})</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </article>
   );

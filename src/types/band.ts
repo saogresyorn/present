@@ -1,7 +1,9 @@
+// src/types/band.ts
 export type Member = {
   id: number;
   name: string;
   role: string;
+  image?: string; // เพิ่มรูปภาพสมาชิก
 };
 
 export type Band = {

@@ -1,4 +1,4 @@
-/* src/app/globals.css */
+/* Reset Style พื้นฐาน */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,85 +8,112 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
-  color: #222222;
-  padding: 40px 20px;
-}
-
-/* Container จัดกลาง */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* หัวข้อหลัก */
-h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 24px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #333333;
-}
-
-/* Layout การจัดวาง Card */
-.band-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* ตัว Card วงดนตรี */
-.band-card {
-  border: 1px solid #e94e4e;
-  padding: 20px;
-  background-color: #d3ee71;
-}
-
-.band-card h2 {
-  font-size: 20px;
-  margin-top: 12px;
-  margin-bottom: 6px;
-  color: #111111;
-}
-
-.genre {
-  font-size: 14px;
-  color: #666666;
-  margin-bottom: 12px;
-}
-
-.description {
-  font-size: 14px;
-  color: #444444;
-  margin-bottom: 16px;
-  line-height: 1.5;
-}
-
-/* รายชื่อสมาชิก */
-.members-section h3 {
-  font-size: 15px;
-  margin-bottom: 8px;
   color: #333333;
 }
 
-.members-section ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.members-section li {
-  font-size: 14px;
-  color: #444444;
-  margin-bottom: 4px;
-}
-
-/* จัดจัดการรูปภาพ */
-/* คัดลอกส่วนนี้ไปวางแทนที่ .image-container เดิมใน globals.css */
-.image-container {
+/* Navbar สไตล์แถบแนวนอน */
+.navbar {
+  background-color: #222222;
+  padding: 14px 24px;
+  margin-bottom: 30px;
   width: 100%;
-  border-radius: 4px;
-  overflow: hidden;
 }
 
-.band-image {
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* จัดกึ่งกลางหน้าเนื้อหาหลัก */
+main, .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.band-card {
+  text-align: center;
+}
+
+.band-info {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.members-section h3 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* รูปแบบกล่องสมาชิกวง */
+.members-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.member-card {
+  width: 140px;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member-image {
+  width: 80px;
+  height: 80px;
   object-fit: cover;
-} 
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  display: block;
+}
+
+.member-name {
+  font-size: 13px;
+  font-weight: bold;
+  color: #222;
+  margin: 4px 0 2px 0;
+}
+
+.member-role {
+  font-size: 11px;
+  color: #666;
+  margin: 0;
+}
